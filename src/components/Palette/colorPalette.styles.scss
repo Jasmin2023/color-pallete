@@ -1,0 +1,43 @@
+ *, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.color-container {
+  display: flex;
+  height: 70%;
+  overflow: hidden;
+  @media screen and (max-width: 550px){
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+.color {
+  flex-basis: 50%;
+  height: 100vh;
+  cursor: pointer;
+  position: relative;
+  @media screen and (max-width: 550px){
+    height: 20vh;
+    flex-basis: 100%;
+  }
+}
+
+.color-code {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.25em;
+  font-weight: 300;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.color-code::selection {
+  background-color: transparent;
+}
+
+ 
